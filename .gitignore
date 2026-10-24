@@ -1,0 +1,30 @@
+# 安装器运行时生成的目录：Python、模型、下载缓存、日志一律不进仓库
+py/
+models/
+download/
+logs/
+
+# 运行时标记
+*.pid
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 打包产物
+*.zip
+!docs/*.zip
+
+# 编辑器与系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 临时文件
+*.log
+*.tmp
+*.bak

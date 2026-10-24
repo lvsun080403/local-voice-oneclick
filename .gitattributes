@@ -1,0 +1,15 @@
+* text=auto
+
+# 脚本在 Windows 上跑，保留 CRLF 更安全（cmd 与 PowerShell 都认，避免行尾半截命令）
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# 文档统一 LF
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+
+# 图片按二进制处理，避免 diff 里出现乱码
+*.png binary
+*.jpg binary
+*.ico binary

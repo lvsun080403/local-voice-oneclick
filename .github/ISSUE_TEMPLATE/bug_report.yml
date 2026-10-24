@@ -1,0 +1,50 @@
+name: 问题反馈
+description: 报告一个 bug 或安装失败
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。贴全日志能省一轮来回：`logs\` 里最新 `.err.log` 的最后 30 行。
+  - type: dropdown
+    id: component
+    attributes:
+      label: 哪一块出问题
+      options:
+        - ASR 部署包（语音转文字）
+        - TTS 部署包（文字转语音）
+        - 桥接插件（面板/胶囊）
+        - 文档
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: 显卡与显存
+      placeholder: 例如 RTX 5070 Ti Laptop / 12 GB
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 双击 install.bat
+        2. 等到第 3 步
+        3. 报错……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望 vs 实际
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志（最后 30 行）
+      render: text
+    validations:
+      required: false
